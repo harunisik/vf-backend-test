@@ -2,7 +2,6 @@
 
 This project was created with [express-generator-typescript](https://github.com/seanpmaxwell/express-generator-typescript).
 
-
 ## Available Scripts
 
 ### `npm run dev`
@@ -32,3 +31,27 @@ Run the production build (Must be built first).
 ### `npm start -- --env="name of env file" (default is production).`
 
 Run production build with a different env file.
+
+## Folder Structure
+
+- [**src**](src)
+  - [**constants**](src/constants)
+  - [**controllers**](src/controllers)
+    - BasketController.ts
+    - ProductController.ts
+  - [**repos**](src/repos)
+    - [**data**](src/repos/data)
+    - [**models**](src/repos/models)
+    - BasketRepo.ts
+    - ProductRepo.ts
+  - [**routes**](src/routes)
+    - BasketRouter.ts
+    - ProductRouter.ts
+  - [**services**](src/services)
+    - BasketService.ts
+    - ProductService.ts
+  - [**util**](src/util)
+
+## OpenAPI (swagger) document
+
+- `http://localhost:3000/api-docs/`
