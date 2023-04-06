@@ -55,7 +55,7 @@ Run production build with a different env file.
 ## OpenAPI (swagger) document
 
 - `http://localhost:3000/api-docs/`
-  <img width="797" alt="Screenshot 2023-04-06 at 12 12 50" src="https://user-images.githubusercontent.com/5821127/230361783-1bab1b2b-e643-40fb-8358-00f69ed319e4.png">
+<img width="808" alt="Screenshot 2023-04-06 at 12 41 06" src="https://user-images.githubusercontent.com/5821127/230385806-2eb73b70-8476-486a-8914-68bde5bd545f.png">
 
 ## Additional Notes
 
