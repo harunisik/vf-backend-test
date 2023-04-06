@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": 7596624904422,
+      "title": "Classic Sticker Pack",
+      "variants": [
+        {
+          "id": 42397295673574,
+          "title": "Default Title",
+          "price": "8.00"
+        }
+      ]
+    },
+    {
+      "id": 10822924045,
+      "title": "Play On Player Women's Tee",
+      "variants": [
+        {
+          "id": 45096030669,
+          "title": "White / Small",
+          "price": "20.00"
+        },
+        {
+          "id": 45096030733,
+          "title": "White / Medium",
+          "price": "20.00"
+        },
+        {
+          "id": 45096030797,
+          "title": "White / Large",
+          "price": "20.00"
+        },
+        {
+          "id": 45096030861,
+          "title": "White / XL",
+          "price": "20.00"
+        },
+        {
+          "id": 45096030925,
+          "title": "White / 2XL",
+          "price": "25.00"
+        }
+      ]
+    }
+  ]
+}
