@@ -24,7 +24,7 @@ async function getAll(): Promise<IProduct[]> {
 /**
  * Get one product.
  */
-async function get(id: number): Promise<IProduct | undefined> {
+async function getOne(id: number): Promise<IProduct | undefined> {
   const db = await openDb();
   return db.products.find((product) => product.id === id);
 }
@@ -36,7 +36,7 @@ async function getVariant(
   productId: number,
   variantId: number
 ): Promise<IVariant | undefined> {
-  const product = await get(productId);
+  const product = await getOne(productId);
   return product?.variants.find(({ id }) => id === variantId);
 }
 
@@ -48,6 +48,6 @@ function openDb() {
 
 export default {
   getAll,
-  getProduct: get,
+  getOne,
   getVariant,
 } as const;

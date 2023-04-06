@@ -16,8 +16,8 @@ import { IVariant } from "@src/repos/models/Product";
 /**
  * Get one basket content.
  */
-async function get(id: number): Promise<IBasket> {
-  const basket = await BasketRepo.get(id);
+async function getOne(id: number): Promise<IBasket> {
+  const basket = await BasketRepo.getOne(id);
   if (!basket) {
     throw new RouteError(HttpStatusCodes.NOT_FOUND, BASKET_NOT_FOUND_ERROR);
   }
@@ -32,7 +32,7 @@ async function addProduct(
   basketId: number,
   basketItem: IBasketItem
 ): Promise<IBasket> {
-  const basket = await get(basketId);
+  const basket = await getOne(basketId);
 
   const item = findBasketItem(
     basketItem.productId,
@@ -60,7 +60,7 @@ async function removeProduct(
   basketId: number,
   basketItem: IBasketItem
 ): Promise<IBasket> {
-  const basket = await get(basketId);
+  const basket = await getOne(basketId);
 
   const item = findBasketItem(
     basketItem.productId,
@@ -141,7 +141,7 @@ function removeBasketItem(
 // **** Export default **** //
 
 export default {
-  get,
+  getOne,
   addProduct,
   removeProduct,
 } as const;

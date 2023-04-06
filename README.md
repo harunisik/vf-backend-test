@@ -55,4 +55,17 @@ Run production build with a different env file.
 ## OpenAPI (swagger) document
 
 - `http://localhost:3000/api-docs/`
-<img width="797" alt="Screenshot 2023-04-06 at 12 12 50" src="https://user-images.githubusercontent.com/5821127/230361783-1bab1b2b-e643-40fb-8358-00f69ed319e4.png">
+  <img width="797" alt="Screenshot 2023-04-06 at 12 12 50" src="https://user-images.githubusercontent.com/5821127/230361783-1bab1b2b-e643-40fb-8358-00f69ed319e4.png">
+
+## Additional Notes
+
+- This project has been implemented using Typescript and Express server
+- It follows a layered architecture
+
+  - `index.ts` ---> `routes` ---> `controllers` ---> `services` ---> `repos`
+
+  - `index.ts`: The entry point of the application. It configures and starts Express backend server
+  - `routes`: It dispatches the requests to the controller layer.
+  - `controllers`: It is first point of the incoming request. Handles and validates the request and passes them to service layer. Sends the response to the client back.
+  - `services`: It bridges between controller and DAO layer and applies business rules. Returns the result of the request to controller layer.
+  - `repos`: It handles database operations and manages DB entities.

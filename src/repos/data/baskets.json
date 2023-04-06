@@ -1,1 +1,18 @@
-{"baskets":[{"id":1,"items":[{"productId":7596624904422,"variantId":42397295673574,"count":1}],"totalPrice":8},{"id":2,"items":[{"productId":7596624904422,"variantId":42397295673574,"count":4}],"totalPrice":32}]}
+{
+  "baskets": [
+    {
+      "id": 1,
+      "items": [
+        { "productId": 7596624904422, "variantId": 42397295673574, "count": 1 }
+      ],
+      "totalPrice": 8
+    },
+    {
+      "id": 2,
+      "items": [
+        { "productId": 7596624904422, "variantId": 42397295673574, "count": 6 }
+      ],
+      "totalPrice": 48
+    }
+  ]
+}

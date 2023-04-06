@@ -12,7 +12,7 @@ import { IReq } from "@src/util/types";
  */
 async function get(req: IReq, res: IRes) {
   const id = +req.params.id;
-  const basket = await BasketService.get(id);
+  const basket = await BasketService.getOne(id);
   return res.status(HttpStatusCodes.OK).json({ basket });
 }
 

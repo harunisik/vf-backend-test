@@ -19,9 +19,15 @@ interface IDb {
 /**
  * Get one basket.
  */
-async function get(id: number): Promise<IBasket | undefined> {
+async function getOne(id: number): Promise<IBasket | undefined> {
   const db = await openDb();
   return db.baskets.find((basket) => basket.id === id);
+  // const basket = db.baskets.find((basket) => basket.id === id);
+  // if (!basket) {
+  //   throw new RouteError(HttpStatusCodes.NOT_FOUND, BASKET_NOT_FOUND_ERROR);
+  // }
+
+  // return [basket];
 }
 
 /**
@@ -51,6 +57,6 @@ function saveDb(db: IDb) {
 // **** Export default **** //
 
 export default {
-  get,
+  getOne,
   update,
 } as const;

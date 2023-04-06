@@ -11,8 +11,10 @@ const Paths = {
     Get: "/",
   },
   Basket: {
-    Base: "/baskets",
+    Base: "/basket",
     Get: "/:id",
+    Post: "/add/:id",
+    Delete: "/remove/:id",
   },
 };
 

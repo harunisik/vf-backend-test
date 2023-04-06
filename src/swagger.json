@@ -25,7 +25,7 @@
             "description": "Order by title",
             "required": false,
             "schema": {
-              "type": "string"
+              "$ref": "#/components/schemas/OrderBy"
             }
           },
           {
@@ -34,7 +34,7 @@
             "description": "Order by price",
             "required": false,
             "schema": {
-              "type": "string"
+              "$ref": "#/components/schemas/OrderBy"
             }
           }
         ],
@@ -62,7 +62,7 @@
         }
       }
     },
-    "/baskets/{basketId}": {
+    "/basket/{basketId}": {
       "get": {
         "summary": "Get basket content",
         "operationId": "getBasket",
@@ -100,7 +100,9 @@
             }
           }
         }
-      },
+      }
+    },
+    "/basket/add/{basketId}": {
       "post": {
         "summary": "Add product to the basket",
         "operationId": "addProduct",
@@ -148,7 +150,9 @@
             }
           }
         }
-      },
+      }
+    },
+    "/basket/remove/{basketId}": {
       "delete": {
         "summary": "Remove product from the basket",
         "operationId": "removeProduct",
@@ -281,6 +285,10 @@
             "format": "double"
           }
         }
+      },
+      "OrderBy": {
+        "type": "string",
+        "enum": ["ASC", "DESC"]
       },
       "Error": {
         "required": ["code", "message"],
